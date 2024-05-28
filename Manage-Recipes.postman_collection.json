@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "646b1d3d-025e-4570-979f-d11eb8dca8c7",
+		"name": "Manage-Recipes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1551887"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "Recipes",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/recipes"
+					},
+					"response": []
+				},
+				{
+					"name": "get-Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/recipes/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter-Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/recipes/filter?instructions=cook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "isVegetarian",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "servings",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "includeIngredients",
+									"value": "Tomato",
+									"disabled": true
+								},
+								{
+									"key": "excludeIngredients",
+									"value": "Tomato",
+									"disabled": true
+								},
+								{
+									"key": "instructions",
+									"value": "cook"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{usernameUser1}}",
+								"password": "{{passwordUser1}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/recipes/11"
+					},
+					"response": []
+				},
+				{
+					"name": "create -Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vegetable .....\",\r\n    \"isVegetarian\": true,\r\n    \"servings\": 3,\r\n    \"instructions\": \"In...\",\r\n    \"userId\": 1,\r\n    \"knownIngredients\": [\r\n        2,\r\n        6,\r\n        16,\r\n        2,\r\n        16\r\n    ],\r\n    \"unKnownIngredients\": [\r\n        \"Basil 1\",\r\n        \"Chicken 1\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/recipes"
+					},
+					"response": []
+				},
+				{
+					"name": "update-Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{usernameUser1}}",
+								"password": "{{passwordUser1}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"Vegetable ---\",\r\n    \"isVegetarian\": true,\r\n    \"servings\": 32,\r\n    \"instructions\": \"In ---\",\r\n    \"ingredients\": [\r\n        {\r\n            \"id\": 5,\r\n            \"name\": \"Carrot\"\r\n        },\r\n        {\r\n            \"id\": 9,\r\n            \"name\": \"Bell Pepper\"\r\n        },\r\n        {\r\n            \"id\": 11,\r\n            \"name\": \"Broccoli\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/recipes"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ingredient",
+			"item": [
+				{
+					"name": "Ingredients",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/ingredient"
+					},
+					"response": []
+				},
+				{
+					"name": "get-Ingredient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/ingredient/2"
+					},
+					"response": []
+				},
+				{
+					"name": "delete-Ingredient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{usernameUser1}}",
+								"password": "{{passwordUser1}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/ingredient/11"
+					},
+					"response": []
+				},
+				{
+					"name": "create -Ingredient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"password": "{{passwordUser1}}",
+								"username": "{{usernameUser1}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chicken 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/ingredient"
+					},
+					"response": []
+				},
+				{
+					"name": "update-Ingredient",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": {
+								"username": "{{usernameUser1}}",
+								"password": "{{passwordUser1}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 19,\r\n    \"name\": \"Chicken 22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/ingredient"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

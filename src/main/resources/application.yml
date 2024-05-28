@@ -1,0 +1,16 @@
+spring:
+  datasource: # H2 Database Configuration
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa: # Hibernate JPA Configuration
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: none
+  sql:
+    init: # Spring Data SQL initialization (DDL + DML scripts)
+      mode: always
+  h2:
+    console: # H2 Console Configuration
+      enabled: true
+      path: /h2-console # http://localhost:8080/h2-console
