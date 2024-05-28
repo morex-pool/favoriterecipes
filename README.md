@@ -48,6 +48,10 @@ http://localhost:8080/swagger-ui/index.html
 
 The Docker file is added in project to containerize the application.
 
+# For test the Rest APIs, you can use Postman collection file that placed in root of the project #
+
+Postman collection file: Manage-Recipes.postman_collection.json
+
 To build: docker build -t favoriterecipes-0.0.1-SNAPSHOT.jar .
 
 To run: docker run -p 8080:8080 favoriterecipes-0.0.1-SNAPSHOT.jar
