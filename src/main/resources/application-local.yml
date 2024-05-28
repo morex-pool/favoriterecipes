@@ -1,6 +1,0 @@
-spring:
-  jpa: # Hibernate JPA Configuration
-    show-sql: true # Show SQL
-    properties: # Show SQL
-      hibernate:
-        format_sql: true
